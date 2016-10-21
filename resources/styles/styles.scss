@@ -67,3 +67,18 @@ li{
   background: #454545;
   border-color: #454545;
 }
+
+.mealbox:hover{
+  color: #91bbff;
+  cursor:pointer;
+}
+
+
+.mealbox{
+  background-color: #565656;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  margin:5px;
+  width:50%
+}

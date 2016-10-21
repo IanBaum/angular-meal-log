@@ -6,6 +6,9 @@ import { Meal } from './meal.model';
   template: `
   <div class="container">
     <h1>Meal Log</h1>
+    <new-meal
+    (newMealSender)="addMeal($event)"
+    ></new-meal>
     <meal-list
     [childMealList]="masterMealList"
     (clickSender)="showDetails($event)"
@@ -20,9 +23,9 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
     public masterMealList: Meal[] = [
-      new Meal("Toast",0),
-      new Meal("Pasta",1),
-      new Meal("Ice Cream",2)
+      new Meal("Toast","Slightly burnt", 200, 0),
+      new Meal("Pasta","with sauce", 400, 1),
+      new Meal("Ice Cream","vanilla",300,2)
     ];
 
   selectedMeal: Meal = null;
@@ -31,5 +34,8 @@ export class AppComponent {
   }
   finishedEditing() {
     this.selectedMeal = null;
+  }
+  addMeal(newMealFromChild: Meal){
+    this.masterMealList.push(newMealFromChild);
   }
 }
