@@ -26,7 +26,6 @@ export class MealListComponent {
   public selectedCalories: string = "all";
   onChange(optionFromMenu){
     this.selectedCalories = optionFromMenu;
-    console.log(this.selectedCalories);
   }
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);

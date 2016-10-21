@@ -7,7 +7,6 @@ pure: false
 })
 export class CaloriesFilterPipe implements PipeTransform{
   transform(input: Meal[], desiredCalories){
-    console.log(input);
     var output: Meal[] = [];
     if(desiredCalories === ">500"){
       for (var i =0; i < input.length; i++){
@@ -15,7 +14,6 @@ export class CaloriesFilterPipe implements PipeTransform{
           output.push(input[i]);
         }
       }
-      console.log("high");
       return output;
     } else if(desiredCalories === "<500"){
       for (var i = 0; i < input.length; i++){
@@ -23,10 +21,8 @@ export class CaloriesFilterPipe implements PipeTransform{
           output.push(input[i]);
         }
       }
-      console.log("low");
       return output;
     } else {
-      console.log("else");
       return input;
     }
   }
