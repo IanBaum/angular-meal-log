@@ -9,10 +9,10 @@
 install npm, bower, and gulp.
 
 * _clone this repository_
-* _ run "npm install"_
-* _ run "bower install"_
-* _ run "gulp build"_
-* _ run "gulp serve"_
+* _run "npm install"_
+* _run "bower install"_
+* _run "gulp build"_
+* _run "gulp serve"_
 
 ## Support and Contact Details
 
